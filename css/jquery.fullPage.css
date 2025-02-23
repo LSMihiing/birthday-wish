@@ -1,0 +1,181 @@
+/**
+ * fullPage 2.4.6
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html, body {
+    margin: 0; /* 去除默认外边距 */
+    padding: 0; /* 去除默认内边距 */
+    overflow:hidden; /* 隐藏溢出内容 */
+
+    /* 避免在移动设备上滑动时出现闪烁 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%; /* 设置高度为100% */
+    position: relative; /* 相对定位 */
+
+    /* Windows 8 触摸检测 */
+    -ms-touch-action: none;
+
+    /* Windows Phone 8.1上的IE 11 */
+    touch-action: none;
+}
+.fp-section {
+    position: relative; /* 相对定位 */
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box; /* 包括内边距和边框在内计算元素的宽高 */
+}
+.fp-slide {
+    float: left; /* 左浮动 */
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%; /* 设置高度为100% */
+    display: block; /* 块级元素 */
+}
+.fp-slides {
+    z-index:1; /* 设置堆叠顺序 */
+    height: 100%; /* 设置高度为100% */
+    overflow: hidden; /* 隐藏溢出内容 */
+    position: relative; /* 相对定位 */
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out; /* 过渡效果 */
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table; /* 表格布局 */
+    table-layout:fixed; /* 固定表格布局 */
+    width: 100%; /* 设置宽度为100% */
+}
+.fp-tableCell {
+    display: table-cell; /* 表格单元格 */
+    vertical-align: middle; /* 垂直居中 */
+    width: 100%; /* 设置宽度为100% */
+    height: 100%; /* 设置高度为100% */
+}
+.fp-slidesContainer {
+    float: left; /* 左浮动 */
+    position: relative; /* 相对定位 */
+}
+.fp-controlArrow {
+    position: absolute; /* 绝对定位 */
+    z-index: 4; /* 设置堆叠顺序 */
+    top: 50%; /* 距顶部50% */
+    cursor: pointer; /* 鼠标指针样式 */
+    width: 0; /* 宽度为0 */
+    height: 0; /* 高度为0 */
+    border-style: solid; /* 实线边框 */
+    margin-top: -38px; /* 上外边距为-38px */
+}
+.fp-controlArrow.fp-prev {
+    left: 15px; /* 距左边15px */
+    width: 0; /* 宽度为0 */
+    border-width: 38.5px 34px 38.5px 0; /* 边框宽度 */
+    border-color: transparent #fff transparent transparent; /* 边框颜色 */
+}
+.fp-controlArrow.fp-next {
+    right: 15px; /* 距右边15px */
+    border-width: 38.5px 0 38.5px 34px; /* 边框宽度 */
+    border-color: transparent transparent transparent #fff; /* 边框颜色 */
+}
+.fp-scrollable {
+    overflow: scroll; /* 滚动 */
+}
+.fp-notransition {
+    -webkit-transition: none !important; /* 禁用过渡效果 */
+    transition: none !important; /* 禁用过渡效果 */
+}
+#fp-nav {
+    position: fixed; /* 固定定位 */
+    z-index: 100; /* 设置堆叠顺序 */
+    margin-top: -32px; /* 上外边距为-32px */
+    top: 50%; /* 距顶部50% */
+    opacity: 1; /* 不透明度 */
+}
+#fp-nav.right {
+    right: 17px; /* 距右边17px */
+}
+#fp-nav.left {
+    left: 17px; /* 距左边17px */
+}
+.fp-slidesNav{
+    position: absolute; /* 绝对定位 */
+    z-index: 4; /* 设置堆叠顺序 */
+    left: 50%; /* 距左边50% */
+    opacity: 1; /* 不透明度 */
+}
+.fp-slidesNav.bottom {
+    bottom: 17px; /* 距底部17px */
+}
+.fp-slidesNav.top {
+    top: 17px; /* 距顶部17px */
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0; /* 去除默认外边距 */
+  padding: 0; /* 去除默认内边距 */
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block; /* 块级元素 */
+    width: 14px; /* 设置宽度为14px */
+    height: 13px; /* 设置高度为13px */
+    margin: 7px; /* 外边距为7px */
+    position:relative; /* 相对定位 */
+}
+.fp-slidesNav ul li {
+    display: inline-block; /* 行内块元素 */
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block; /* 块级元素 */
+    position: relative; /* 相对定位 */
+    z-index: 1; /* 设置堆叠顺序 */
+    width: 100%; /* 设置宽度为100% */
+    height: 100%; /* 设置高度为100% */
+    cursor: pointer; /* 鼠标指针样式 */
+    text-decoration: none; /* 去除文本装饰 */
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #333; /* 背景颜色 */
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    top: 2px; /* 距顶部2px */
+    left: 2px; /* 距左边2px */
+    width: 8px; /* 设置宽度为8px */
+    height: 8px; /* 设置高度为8px */
+    border: 1px solid #000; /* 边框颜色 */
+    background: rgba(0, 0, 0, 0); /* 背景颜色 */
+    border-radius: 50%; /* 边框圆角 */
+    position: absolute; /* 绝对定位 */
+    z-index: 1; /* 设置堆叠顺序 */
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute; /* 绝对定位 */
+    top: -2px; /* 距顶部-2px */
+    color: #fff; /* 字体颜色 */
+    font-size: 14px; /* 字体大小 */
+    font-family: arial, helvetica, sans-serif; /* 字体 */
+    white-space: nowrap; /* 不换行 */
+    max-width: 220px; /* 最大宽度 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    display: block; /* 块级元素 */
+    opacity: 0; /* 不透明度 */
+    width: 0; /* 宽度为0 */
+}
+#fp-nav ul li:hover .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in; /* 过渡效果 */
+    transition: opacity 0.2s ease-in; /* 过渡效果 */
+    width: auto; /* 自动宽度 */
+    opacity: 1; /* 不透明度 */
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px; /* 距右边20px */
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px; /* 距左边20px */
+}
