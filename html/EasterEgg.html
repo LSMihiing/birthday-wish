@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="en"> <!-- HTML根元素，设置语言为英文 -->
 <script>
+  // 定义百度统计的全局变量
   var _hmt = _hmt || [];
+  // 立即执行的匿名函数，用于加载百度统计脚本
   (function () {
+    // 创建script标签元素
     var hm = document.createElement("script");
+    // 设置百度统计脚本的源地址
     hm.src = "https://hm.baidu.com/hm.js?c923daf3182a4b0ce01878475080aadc";
+    // 获取页面中第一个script标签
     var s = document.getElementsByTagName("script")[0];
+    // 将百度统计脚本插入到第一个script标签之前
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
 
 <head>
   <meta charset="UTF-8">
-  <title>小可爱，生日快乐！</title>
+  <title>张玉佩，生日快乐！</title>
 
 </head>
 <style>
@@ -161,7 +167,7 @@
     c2.width = c3.width = window.innerWidth;
     c2.height = c3.height = window.innerHeight;
     ctx1.fillStyle = '#000';
-    const text = '小可爱,生日快乐！'
+    const text = '张玉佩,生日快乐！'
     let textWidth = 99999999;
 
     while (textWidth > window.innerWidth) {
