@@ -829,25 +829,42 @@
 	transition-delay: 6s;
 }
 
+/* 定义文本样式类 */
 .ly-txt14 {
-	text-indent:2em;
-	font-family: Microsoft YaHei;
-	font-size: 18px;
-	font-color: #000;
-	position: absolute;
-	margin-left:30px;
-	margin-right:30px;
-	top: 12%;
-	opacity: 1;
-	transition: all 13s;
-	height:0;
-	width:88%;
-	overflow:hidden;
+    /* 设置首行缩进2个字符 */
+    text-indent:2em;
+    /* 设置字体为微软雅黑 */
+    font-family: Microsoft YaHei;
+    /* 设置字体大小为20像素 */
+    font-size: 25px;
+    /* 设置字体颜色为黑色 */
+    font-color: #000;
+    /* 设置定位方式为绝对定位 */
+    position: absolute;
+    /* 设置左边距为30像素 */
+    margin-left:30px;
+    /* 设置右边距为30像素 */
+    margin-right:30px;
+    /* 设置顶部位置为12% */
+    top: 12%;
+    /* 设置透明度为1(完全不透明) */
+    opacity: 1;
+    /* 设置所有属性过渡时间为13秒 */
+    transition: all 13s;
+    /* 初始高度为0 */
+    height:0;
+    /* 设置宽度为88% */
+    width:88%;
+    /* 设置溢出内容隐藏 */
+    overflow:hidden;
 }
 
+/* 当元素处于激活状态时的样式 */
 .active .ly-txt14 {
-	height:500px;
-	transition-delay: 6.5s;
+    /* 设置高度为500像素 */
+    height:500px;
+    /* 设置过渡延迟时间为6.5秒 */
+    transition-delay: 6.5s;
 }
 
 /**                                        第三部分                                  **/
@@ -1210,27 +1227,87 @@
 	transition-delay: 2s;
 }
 /* 盒子 */
+/* 定义盒子基本样式 */
 .ly-box31 {
-	width: 30%;
-	height: 600px;
-	border: 2px #CCC;
-	background-color: #fff;
-	background-color: rgba(255,255,255,0.6);
-	border-radius: 8px;
-	position: absolute;
-	left: 23%;
-	top:10%;
-	overflow: hidden;
-	opacity: 0;
-	-webkit-transform: scale(0.5, 0.5);
-	transform: scale(0.5, 0.5);
-	transition: all 1s;
+    /* 设置宽度为30% */
+    width: 30%;
+    /* 设置高度为600px */
+    height: 600px;
+    /* 设置边框为2px灰色 */
+    border: 2px #CCC;
+    /* 设置背景色为白色 */
+    background-color: #fff;
+    /* 设置半透明背景色 */
+    background-color: rgba(255,255,255,0.6);
+    /* 设置圆角为8px */
+    border-radius: 8px;
+    /* 设置绝对定位 */
+    position: absolute;
+    /* 距左边23% */
+    left: 23%;
+    /* 距顶部10% */
+    top:10%;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 初始透明度为0(完全透明) */
+    opacity: 0;
+    /* 设置初始缩放比例为0.5 */
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    /* 所有属性过渡时间为1秒 */
+    transition: all 1s;
 }
+
+/* 当元素激活时的样式 */
 .active .ly-box31{
-	opacity: 0.9;
-	-webkit-transform: scale(1, 1);
-	transform: scale(1, 1);
-	transition-delay: 2.5s;
+    /* 设置透明度为0.9 */
+    opacity: 0.9;
+    /* 设置缩放比例为1 */
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    /* 设置过渡延迟2.5秒 */
+    transition-delay: 2.5s;
+}
+/* 定义盒子基本样式 */
+.ly-box441 {
+    /* 设置宽度为30% */
+    width: 32%;
+    /* 设置高度为600px */
+    height: 550px;
+    /* 设置边框为2px灰色 */
+    border: 2px #CCC;
+    /* 设置背景色为白色 */
+    background-color: #fff;
+    /* 设置半透明背景色 */
+    background-color: rgba(255,255,255,0.6);
+    /* 设置圆角为8px */
+    border-radius: 8px;
+    /* 设置绝对定位 */
+    position: absolute;
+    /* 距左边23% */
+    left: 23%;
+    /* 距顶部10% */
+    top:10%;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 初始透明度为0(完全透明) */
+    opacity: 0;
+    /* 设置初始缩放比例为0.5 */
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    /* 所有属性过渡时间为1秒 */
+    transition: all 1s;
+}
+
+/* 当元素激活时的样式 */
+.active .ly-box441{
+    /* 设置透明度为0.9 */
+    opacity: 0.9;
+    /* 设置缩放比例为1 */
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    /* 设置过渡延迟2.5秒 */
+    transition-delay: 2.5s;
 }
 /*小三角*/
 .ly-triangle31 {
@@ -1294,6 +1371,34 @@
 	transition-delay: 3.5s;
 }
 
+/*文本*/
+.ly-txt441 {
+    /* 设置字体为微软雅黑 */
+    font-family: Microsoft YaHei;
+    /* 设置字体大小为30像素 */
+    font-size: 30px;
+    /* 设置文字阴影为1像素 */
+    text-shadow: 1px;
+    /* 设置字体颜色为黑色 */
+    font-color: #000;
+    /* 设置定位方式为绝对定位 */
+    position: absolute;
+    /* 设置左边距为3% */
+    left: 3%;
+    /* 设置顶部边距为4% */
+    top: 4%;
+    /* 设置透明度为0(完全透明) */
+    opacity: 0;
+    /* 设置所有属性过渡时间为0.5秒 */
+    transition: all 0.5s;
+}
+
+.active .ly-txt441 {
+    /* 设置透明度为1(完全不透明) */
+    opacity: 1;
+    /* 设置过渡延迟时间为3.5秒 */
+    transition-delay: 3.5s;
+}
 .ly-txt32 p{
 	margin: 0;
 	padding: 0;

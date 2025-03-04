@@ -18,9 +18,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>张玉佩，生日快乐！</title>
-
+  <title>小张同学，生日快乐！</title>
+  <!-- 添加音乐播放器 -->
+  <audio id="bgMusic" src="../music/1.mp3" autoplay loop>
+    您的浏览器不支持 audio 标签。
+  </audio>
 </head>
+
+<script>
+// 在页面加载完成后自动播放音乐
+window.onload = function() {
+  var audio = document.getElementById('bgMusic');
+  // 尝试播放音乐
+  audio.play().catch(function(error) {
+    console.log("音乐自动播放失败:", error);
+  });
+};
+</script>
 <style>
   body {
     margin: 0;
@@ -167,7 +181,7 @@
     c2.width = c3.width = window.innerWidth;
     c2.height = c3.height = window.innerHeight;
     ctx1.fillStyle = '#000';
-    const text = '张玉佩,生日快乐！'
+    const text = '小张同学,生日快乐！'
     let textWidth = 99999999;
 
     while (textWidth > window.innerWidth) {
